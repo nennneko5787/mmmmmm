@@ -35,7 +35,7 @@ class EmbedModal(discord.ui.Modal, title="埋め込みを編集"):
         self.footerIcon = discord.ui.TextInput(
             label="フッターのアイコン", placeholder="省略可", required=False
         )
-        self.add_item(self.footer)
+        self.add_item(self.footerIcon)
 
     async def on_submit(self, interaction: discord.Interaction) -> None:
         if not interaction.user.guild_permissions.manage_guild:
