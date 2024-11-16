@@ -47,7 +47,7 @@ class EmbedModal(discord.ui.Modal, title="埋め込みを編集"):
         embed = discord.Embed(
             title=self._title.value,
             description=self.content.value,
-            colour=discord.Colour.from_str(self.color),
+            colour=discord.Colour.from_str(self.color.value),
         )
         if self.user:
             embed.set_author(
