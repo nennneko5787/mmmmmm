@@ -4,7 +4,7 @@ from discord import app_commands
 
 
 class Modal(discord.ui.Modal, title="埋め込みを編集"):
-    def __init__(self, channel: discord.TextChannel, *, user: discord.Member | None):
+    def __init__(self, *, channel: discord.TextChannel, *, user: discord.Member | None):
         super().__init__()
 
         self.channel = channel
@@ -71,7 +71,7 @@ class EmbedCog(commands.Cog):
     ):
         if not channel:
             channel = interaction.channel
-        await interaction.response.send_modal(Modal(channel, user=user))
+        await interaction.response.send_modal(Modal(channel=channel, user=user))
 
 
 async def setup(bot: commands.Bot):
