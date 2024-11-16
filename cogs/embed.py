@@ -55,7 +55,7 @@ class EmbedModal(discord.ui.Modal, title="埋め込みを編集"):
             )
 
         await self.channel.send(embed=embed)
-        await interaction.response.send_message("ok")
+        await interaction.response.send_message("ok", ephemeral=True)
 
 
 class EmbedCog(commands.Cog):
