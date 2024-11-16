@@ -5,7 +5,7 @@ from discord import app_commands
 
 class Modal(discord.ui.Modal):
     def __init__(self, channel: discord.TextChannel, *, user: discord.Member | None):
-        super().__init__(title="埋め込みを編集" custom_id="a")
+        super().__init__(title="埋め込みを編集", custom_id="a")
 
         self.channel = channel
         self.user = user
