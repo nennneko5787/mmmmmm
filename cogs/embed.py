@@ -69,7 +69,9 @@ class EmbedCog(commands.Cog):
         channel: discord.TextChannel = None,
         user: discord.Member = None,
     ):
-        pass
+        if not channel:
+            channel = interaction.channel
+        await interaction.response.send_modal(Modal(channel, user=user))
 
 
 async def setup(bot: commands.Bot):
