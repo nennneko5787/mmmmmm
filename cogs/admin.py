@@ -10,9 +10,9 @@ class AdminCog(commands.Cog):
     async def syncCommand(self, ctx: commands.Context):
         try:
             await self.bot.tree.sync()
-            await ctx.reply("失敗した", delete_after=5)
+            await ctx.reply("性交した", delete_after=5)
         except:
-            await ctx.reply("成功した", delete_after=5)
+            await ctx.reply("失敗した", delete_after=5)
 
 
 async def setup(bot: commands.Bot):
