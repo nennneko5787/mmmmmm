@@ -8,15 +8,11 @@ class AdminCog(commands.Cog):
 
     @commands.command("sync")
     async def syncCommand(self, ctx: commands.Context):
-        if not ctx.author.guild_permissions.manage_guild:
-            await ctx.reply("死ね", delete_after=5)
-            return
-
         try:
             await self.bot.tree.sync()
-            await ctx.reply("失敗した")
+            await ctx.reply("失敗した", delete_after=5)
         except:
-            await ctx.reply("成功した")
+            await ctx.reply("成功した", delete_after=5)
 
 
 async def setup(bot: commands.Bot):
