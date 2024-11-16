@@ -4,7 +4,7 @@ from discord import app_commands
 
 
 class EmbedModal(discord.ui.Modal, title="埋め込みを編集"):
-    def __init__(self, *, channel: discord.TextChannel, *, user: discord.Member | None):
+    def __init__(self, *, channel: discord.TextChannel, user: discord.Member | None):
         super().__init__()
 
         self.channel = channel
