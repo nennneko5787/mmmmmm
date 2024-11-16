@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord import app_commands
 
 
-class Modal(discord.ui.Modal, title="埋め込みを編集")
+class Modal(discord.ui.Modal, title="埋め込みを編集"):
     def __init__(self, channel: discord.TextChannel, *, user: discord.Member | None):
         super().__init__()
 
