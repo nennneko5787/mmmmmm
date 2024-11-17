@@ -7,7 +7,7 @@ class JoinCog(commands.Cog):
         self.bot = bot
 
     @commands.Cog.listener()
-    async def on_member_join(member: discord.Member):
+    async def on_member_join(self, member: discord.Member):
         embed = discord.Embed(
             title=f"ようこそ{member.guild.name}へ",
             description=f"ようこそ！{member.mention} さんは{len(member.guild.members)}人目の参加者です",
