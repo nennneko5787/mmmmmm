@@ -13,6 +13,7 @@ bot = commands.Bot("meigen#", intents=discord.Intents.all())
 async def setup_hook():
     await bot.load_extension("cogs.embed")
     await bot.load_extension("cogs.admin")
+    await bot.load_extension("cogs.join")
 
 
 @bot.event
